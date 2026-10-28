@@ -1,0 +1,31 @@
+{
+  "name": "minipay_payment_tracker",
+  "version": "1.0.0",
+  "description": "A lightweight payment transaction API with idempotency, PostgreSQL persistence, and automated tests.",
+  "main": "index.js",
+  "scripts": {
+  "start": "node src/server.js",
+  "dev": "node --watch src/server.js",
+  "test": "jest --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sanjli01/minipay_payment_tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sanjli01/minipay_payment_tracker/issues"
+  },
+  "homepage": "https://github.com/Sanjli01/minipay_payment_tracker#readme",
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "pg": "^8.23.1"
+  },
+  "devDependencies": {
+    "jest": "^30.5.2",
+    "supertest": "^7.3.1"
+  }
+}

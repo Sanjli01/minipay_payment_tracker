@@ -1,0 +1,9 @@
+CREATE TABLE transactions (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    amount NUMERIC(12, 2) NOT NULL CHECK (amount > 0),
+    currency VARCHAR(3) NOT NULL DEFAULT 'INR',
+    status VARCHAR(10) NOT NULL DEFAULT 'PENDING'
+        CHECK (status IN ('PENDING', 'SUCCESS', 'FAILED')),
+    idempotency_key VARCHAR(255) UNIQUE NOT NULL,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
